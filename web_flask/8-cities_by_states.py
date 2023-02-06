@@ -5,10 +5,12 @@ from models import storage
 
 app = Flask(__name__)
 
+
 @app.teardown_appcontext
 def tearDown():
     """remove current SQLAlchemy Session"""
     storage.close()
+
 
 @app.route('/states_list', strict_slashes=False)
 def list_states():
@@ -22,6 +24,7 @@ def citiesByStates():
     statesObj = [state for state in storage.all("States").values()]
 
     return render_template('8-cities_by_states.html', stateObj=statesObj)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

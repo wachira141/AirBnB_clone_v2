@@ -6,22 +6,25 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def hello_route():
     """this route returns Hello HBNB"""
     return "Hello HBNB!"
+
 
 @app.route('/hbnb', strict_slashes=False)
 def hello_hbnb():
     """this route returns HBNB"""
     return "HBNB"
 
+
 @app.route('/c/<text>', strict_slashes=False)
 def var_path(text):
     """pass variables to the path"""
     if "_" in text:
         text = text.replace("_", " ")
-    return "C %s" %text
+    return "C %s" % text
 
 
 @app.route('/python', strict_slashes=False)
@@ -31,6 +34,7 @@ def default_var(text='is cool'):
     if "_" in text:
         text = text.replace("_", " ")
     return "Python %s" % text
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

@@ -6,11 +6,13 @@ from models import storage
 
 app = Flask(__name__)
 
+
 @app.route("/states", strict_slashes=False)
 def states():
     """return all states instance"""
     states = [state for state in storage.all('States').values()]
     return render_template('9-states.html', states=states)
+
 
 @app.route('/states<id>',strict_slashes=False )
 def getSingleState(id):
@@ -27,6 +29,7 @@ def getSingleState(id):
 def tearDown():
     """ter down method"""
     storage.close()
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

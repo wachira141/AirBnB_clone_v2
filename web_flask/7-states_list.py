@@ -21,5 +21,6 @@ def tearDown():
     """remove current SQLAlchemy session after each request"""
     storage.close()
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
