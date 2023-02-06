@@ -1,0 +1,35 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular, "Helvetica Neue", Arial, sans-serif;
+}
+div.container{
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+=======
+/*
+ * === Global style ===
+ */
+
+/* Body style */
+body {
+  color: #484848;
+  font: 14px Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Container style */
+.container {
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+/* Strong style */
+strong {
+  font-weight: bold;
+}
+>>>>>>> 14febca325023d39d7c24f41b90abeea466e003c
